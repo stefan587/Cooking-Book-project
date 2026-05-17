@@ -16,6 +16,7 @@ int main() {
         cout << "1. Add Recipe" << endl;
         cout << "2. Show Recipes" << endl;
         cout << "3. Search Recipe By Name" << endl;
+        cout << "4. Search By Ingredient" << endl;
         cout << "0. Exit" << endl;
         cout << "Enter choice: ";
 
@@ -34,6 +35,10 @@ int main() {
         case 3:
             manager.searchByName();
             break;    
+        
+        case 4:
+            manager.searchByIngredient();
+            break;
 
         case 0:
             cout << "Goodbye!" << endl;
