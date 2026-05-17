@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include "Ingredient.h"
 
 using namespace std;
@@ -15,8 +16,21 @@ private:
     vector<string> tags;
 
 public:
+
     Recipe() {
         name = "";
+    }
+
+    void setName(string recipeName) {
+        name = recipeName;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    void printRecipe() {
+        cout << "Recipe: " << name << endl;
     }
 };
 
