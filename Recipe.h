@@ -55,6 +55,25 @@ public:
                  << endl;
         }
     }
+
+    void scaleRecipe(double multiplier) {
+
+    cout << "Scaled Recipe: " << name << endl;
+
+    for (int i = 0; i < ingredients.size(); i++) {
+
+        double scaledQuantity =
+            ingredients[i].getQuantity() * multiplier;
+
+        cout << "- "
+             << ingredients[i].getName()
+             << " "
+             << scaledQuantity
+             << " "
+             << ingredients[i].getUnit()
+             << endl;
+    }
+}
 };
 
 #endif

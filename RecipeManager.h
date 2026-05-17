@@ -100,6 +100,37 @@ public:
     }
 }
 
+    void scaleRecipeByName() {
+
+    string recipeName;
+
+    cout << "Enter recipe name: ";
+
+    cin.ignore();
+    getline(cin, recipeName);
+
+    double multiplier;
+
+    cout << "Enter scaling multiplier: ";
+    cin >> multiplier;
+
+    bool found = false;
+
+    for (int i = 0; i < recipes.size(); i++) {
+
+        if (recipes[i].getName() == recipeName) {
+
+            recipes[i].scaleRecipe(multiplier);
+
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout << "Recipe not found." << endl;
+    }
+}
+
     void searchByName() {
 
     string searchName;
