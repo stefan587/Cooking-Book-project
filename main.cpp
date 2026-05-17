@@ -15,6 +15,7 @@ int main() {
         cout << "=== Cooking Book Menu ===" << endl;
         cout << "1. Add Recipe" << endl;
         cout << "2. Show Recipes" << endl;
+        cout << "3. Search Recipe By Name" << endl;
         cout << "0. Exit" << endl;
         cout << "Enter choice: ";
 
@@ -29,6 +30,10 @@ int main() {
         case 2:
             manager.showRecipes();
             break;
+           
+        case 3:
+            manager.searchByName();
+            break;    
 
         case 0:
             cout << "Goodbye!" << endl;

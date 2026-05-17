@@ -42,6 +42,33 @@ public:
             recipes[i].printRecipe();
         }
     }
+
+    void searchByName() {
+
+    string searchName;
+
+    cout << "Enter recipe name to search: ";
+
+    cin.ignore();
+    getline(cin, searchName);
+
+    bool found = false;
+
+    for (int i = 0; i < recipes.size(); i++) {
+
+        if (recipes[i].getName() == searchName) {
+
+            cout << "Recipe found:" << endl;
+            recipes[i].printRecipe();
+
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout << "Recipe not found." << endl;
+    }
+}
 };
 
 #endif
