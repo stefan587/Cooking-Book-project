@@ -199,6 +199,28 @@ public:
         cout << "Recipe not found." << endl;
     }
 }
+
+    void generateShoppingList() {
+
+    cout << "Shopping List:" << endl;
+
+    for (int i = 0; i < recipes.size(); i++) {
+
+        vector<Ingredient> ingredients =
+            recipes[i].getIngredients();
+
+        for (int j = 0; j < ingredients.size(); j++) {
+
+            cout
+                << ingredients[j].getName()
+                << " "
+                << ingredients[j].getQuantity()
+                << " "
+                << ingredients[j].getUnit()
+                << endl;
+        }
+    }
+}
 };
 
 #endif

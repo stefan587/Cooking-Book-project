@@ -23,6 +23,7 @@ int main() {
         cout << "6. Scale Recipe" << endl;
         cout << "7. Add Meal To Day" << endl;
         cout << "8. Show Weekly Menu" << endl;
+        cout << "9. Generate Shopping List" << endl;
         cout << "0. Exit" << endl;
         cout << "Enter choice: ";
 
@@ -72,6 +73,10 @@ int main() {
 
         case 8:
         planner.showMenu();
+        break;
+
+        case 9:
+        manager.generateShoppingList();
         break;
 
         case 0:
