@@ -17,7 +17,8 @@ int main() {
         cout << "2. Show Recipes" << endl;
         cout << "3. Search Recipe By Name" << endl;
         cout << "4. Search By Ingredient" << endl;
-        cout << "5. Scale Recipe" << endl;
+        cout << "5. Search By Tag" << endl;
+        cout << "6. Scale Recipe" << endl;
         cout << "0. Exit" << endl;
         cout << "Enter choice: ";
 
@@ -40,8 +41,12 @@ int main() {
         case 4:
             manager.searchByIngredient();
             break;
-
+        
         case 5:
+        manager.searchByTag();
+        break;    
+
+        case 6:
             manager.scaleRecipeByName();
             break;    
 

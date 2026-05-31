@@ -112,6 +112,35 @@ public:
         cout << "No recipes found with this ingredient." << endl;
     }
 }
+    void searchByTag() {
+
+    string tag;
+
+    cout << "Enter tag: ";
+    cin >> tag;
+
+    bool found = false;
+
+    for (int i = 0; i < recipes.size(); i++) {
+
+        vector<string> tags = recipes[i].getTags();
+
+        for (int j = 0; j < tags.size(); j++) {
+
+            if (tags[j] == tag) {
+
+                recipes[i].printRecipe();
+
+                found = true;
+                break;
+            }
+        }
+    }
+
+    if (!found) {
+        cout << "No recipes found." << endl;
+    }
+}
 
     void scaleRecipeByName() {
 
