@@ -14,10 +14,15 @@ private:
 
 public:
     void setMeal(int day, string recipeName) {
-    if (day >= 1 && day <= 7) {
-        weeklyMenu[day - 1] = recipeName;
+
+        if (day >= 1 && day <= 7) {
+         weeklyMenu[day - 1] = recipeName;
+         cout << "Meal added successfully!" << endl;
+        }
+        else {
+         cout << "Invalid day. Please enter a number between 1 and 7." << endl;
+        }
     }
-}
     void showMenu() {
 
     for (int i = 0; i < 7; i++) {
