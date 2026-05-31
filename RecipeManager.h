@@ -206,12 +206,16 @@ public:
 
     for (int i = 0; i < recipes.size(); i++) {
 
+        cout << endl;
+        cout << recipes[i].getName() << ":" << endl;
+
         vector<Ingredient> ingredients =
             recipes[i].getIngredients();
 
         for (int j = 0; j < ingredients.size(); j++) {
 
             cout
+                << "- "
                 << ingredients[j].getName()
                 << " "
                 << ingredients[j].getQuantity()
