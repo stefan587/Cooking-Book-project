@@ -51,9 +51,22 @@ public:
         recipe.addIngredient(ingredient);
     }
 
-    recipes.push_back(recipe);
+    int tagCount;
 
-    cout << "Recipe added successfully!" << endl;
+    cout << "How many tags: ";
+    cin >> tagCount;
+
+    for (int i = 0; i < tagCount; i++) {
+
+        string tag;
+
+        cout << "Tag: ";
+        cin >> tag;
+
+        recipe.addTag(tag);
+        }
+        recipes.push_back(recipe);
+        cout << "Recipe added successfully!" << endl;
 }
 
     void showRecipes() {

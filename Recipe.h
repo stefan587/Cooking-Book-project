@@ -37,6 +37,15 @@ public:
     vector<Ingredient> getIngredients() {
         return ingredients;
     }
+    
+    void addTag(string tag) {
+        tags.push_back(tag);
+        }
+
+    vector<string> getTags() {
+        return tags;
+        }
+    
 
     void printRecipe() {
 
